@@ -56,5 +56,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-sortable": "2.2.0"
   }
 }

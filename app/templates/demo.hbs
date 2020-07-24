@@ -1,0 +1,21 @@
+<h2>Using Modifiers</h2>
+<ul {{sortable-group onChange=this.reorder}}>
+    {{#each this.model as |item|}}
+        <li {{sortable-item model=item}}>
+            <span {{sortable-handle}}>&varr;</span>
+            {{item}}
+        </li>
+    {{/each}}
+</ul>
+
+<h2>Using Component</h2>
+{{#sortable-group model=model onChange=this.reorder as |group|}}
+    {{#each group.model as |modelItem|}}
+        {{#group.item model=modelItem as |item|}}
+            {{#item.handle}}
+                <span class="handle">&varr;</span>
+            {{/item.handle}}
+            {{modelItem}}
+        {{/group.item}}
+    {{/each}}
+{{/sortable-group}}
