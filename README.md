@@ -1,7 +1,13 @@
 # ember-sortable-a11y-demo
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+For `ember-sortable@2.2.0`, the modifier feature is added. However a11y support is broken when using modifiers.
+Steps to reproduce:
+- Boot the app, go to `localhost:4200/`
+- Open browser console
+- Under the heading `Using modifiers`, reorder the items by dragging the handle, observe in the browser console that the new order and the item being reordered is correctly logged.
+- Under the heading `Using modifiers`, reorder the items using the keyboard, observe in the browser console that the item being reordered is logged as `undefined`.
+
+Note: this only breaks for modifiers. Using the addon in component form does not produce the same bug.
 
 ## Prerequisites
 
